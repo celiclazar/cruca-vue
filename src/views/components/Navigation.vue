@@ -61,12 +61,12 @@ export default {
                 </div>
                 <div>
                     <ul class="font-heading text-4xl space-y-6">
-                        <router-link to="/">Home</router-link>
-                        <router-link to="/gallery">Home</router-link>
-                        <router-link to="/merch">Home</router-link>
-                        <router-link to="/reviews">Home</router-link>
-                        <router-link to="/about">Home</router-link>
-                        <router-link to="/contact">Home</router-link>
+                        <li><router-link to="/" class="hover:text-gray-300">Home</router-link></li>
+                        <li><router-link to="/gallery" class="hover:text-gray-300">Gallery</router-link></li>
+                        <li><router-link to="/merch" class="hover:text-gray-300">Merch</router-link></li>
+                        <li><router-link to="/reviews" class="hover:text-gray-300">Reviews</router-link></li>
+                        <li><router-link to="/about" class="hover:text-gray-300">About Me</router-link></li>
+                        <li><router-link to="/contact" class="hover:text-gray-300">Contact</router-link></li>
                     </ul>
                 </div>
 
