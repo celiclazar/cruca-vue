@@ -1,0 +1,45 @@
+<template>
+    <footer class="bg-black text-white py-8 border-t border-gray-200 font-body">
+        <div class="container mx-auto px-4 text-center sm:px-16">
+            <!-- Logo Placeholder -->
+            <div class="mb-4">
+                <img src="" alt="CRUCIO Logo" class="h-12 mx-auto">
+            </div>
+            <!-- Navigation Links -->
+            <nav class="flex flex-col sm:flex-row justify-center items-center gap-y-2 sm:gap-x-4 mb-4">
+                <a href="/gallery" class="hover:text-gray-400">Gallery</a>
+                <a href="/merch" class="hover:text-gray-400">Merch</a>
+                <a href="/reviews" class="hover:text-gray-400">Reviews</a>
+                <a href="/faq" class="hover:text-gray-400">FAQ</a>
+                <a href="/about-me" class="hover:text-gray-400">About me</a>
+                <a href="/contact" class="hover:text-gray-400">Contact</a>
+            </nav>
+            <!-- Social Icons -->
+            <div class="flex justify-center gap-x-4 mb-4">
+                <a href="https://www.facebook.com/crucio.inkart" target="_blank">
+                    <img src="" alt="Facebook" class="h-4 w-4">
+                </a>
+                <a href="https://www.instagram.com/crucio.inkart" target="_blank">
+                    <img src="" alt="Instagram" class="h-4 w-4">
+                </a>
+                <a href="https://threads.net" target="_blank">
+                    <img src="" alt="Threads" class="h-4 w-4">
+                </a>
+            </div>
+            <!-- Copyright -->
+            <div class="text-xs mb-4">
+            © All rights reserved by Crucio | <a href="/terms-of-service" class="hover:text-gray-400">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</template>
+
+<script>
+export default {
+
+};
+</script>
+
+<style scoped>
+
+</style>
