@@ -31,7 +31,7 @@ export default {
         <div class="flex-1 flex justify-center">
             <span class="font-semibold text-xl tracking-tight text-white">
         <!-- <img src="/icons/logo.png" class="h-16 w-auto">-->
-                <router-link to="/icons/menu_logo.png">CRUCIO</router-link>
+                <router-link to="/">CRUCIO</router-link>
             </span>
         </div>
         <!-- Right Section as Spacer -->
