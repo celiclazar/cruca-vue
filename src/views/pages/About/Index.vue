@@ -26,7 +26,7 @@ export default {
       <div class="flex flex-col sm:flex-row w-full sm:w-3/5 mx-auto px-10 py-8 relative">
         <div class="flex-1">
           <div class="relative w-full flex justify-center content-center">
-            <img class="rounded-lg sm:mr-16" :src="image" style="bottom: 50%;">
+            <img class="rounded-lg sm:mr-16" src="/images/about.jpg" style="bottom: 50%;">
           </div>
         </div>
         <div class="p-2 sm:mt-0 sm:ml-0 sm:flex-1 mt-6">

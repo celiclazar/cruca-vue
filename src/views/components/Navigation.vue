@@ -1,4 +1,6 @@
 <script>
+import router from '@/router';
+
 
 export default {
     components: {
@@ -29,7 +31,7 @@ export default {
         <div class="flex-1 flex justify-center">
             <span class="font-semibold text-xl tracking-tight text-white">
         <!-- <img src="/icons/logo.png" class="h-16 w-auto">-->
-                <Link href="/" class="font-heading">CRUCIO</Link>
+                <router-link to="/icons/menu_logo.png">CRUCIO</router-link>
             </span>
         </div>
         <!-- Right Section as Spacer -->
@@ -48,7 +50,7 @@ export default {
         <div v-if="menuOpen" class="fixed inset-0 bg-black bg-opacity-100 flex flex-col items-center">
             <div class="text-white text-center transform translate-y-28">
                 <div>
-                    <img src="" class="pb-8">
+                    <img src="/icons/menu_logo.png" class="pb-8">
                 </div>
                 <div>
                     <button @click="toggleMenu" class="mb-6">

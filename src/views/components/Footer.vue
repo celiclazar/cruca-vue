@@ -3,7 +3,7 @@
         <div class="container mx-auto px-4 text-center sm:px-16">
             <!-- Logo Placeholder -->
             <div class="mb-4">
-                <img src="" alt="CRUCIO Logo" class="h-12 mx-auto">
+                <img src="/icons/menu_logo.png" alt="CRUCIO Logo" class="h-12 mx-auto">
             </div>
             <!-- Navigation Links -->
             <nav class="flex flex-col sm:flex-row justify-center items-center gap-y-2 sm:gap-x-4 mb-4">
@@ -17,13 +17,13 @@
             <!-- Social Icons -->
             <div class="flex justify-center gap-x-4 mb-4">
                 <a href="https://www.facebook.com/crucio.inkart" target="_blank">
-                    <img src="" alt="Facebook" class="h-4 w-4">
+                    <img src="/icons/facebook.png" alt="Facebook" class="h-4 w-4">
                 </a>
                 <a href="https://www.instagram.com/crucio.inkart" target="_blank">
-                    <img src="" alt="Instagram" class="h-4 w-4">
+                    <img src="/icons/instagram.png" alt="Instagram" class="h-4 w-4">
                 </a>
                 <a href="https://threads.net" target="_blank">
-                    <img src="" alt="Threads" class="h-4 w-4">
+                    <img src="/icons/threads.png" alt="Threads" class="h-4 w-4">
                 </a>
             </div>
             <!-- Copyright -->

@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <div class="static h-full flex flex-col justify-end items-center">
+  <div class="h-full flex flex-col justify-end items-center">
     <div class="font-heading text-center lg:mb-20">
       <div class="py-8">
         <a href="/booking" class="inline-block px-2 sm:px-6 py-1 border border-gray-100 text-gray-100 font-button uppercase tracking-wide hover:bg-gray-100 hover:text-black transition-colors duration-300">Book Now &raquo;</a>

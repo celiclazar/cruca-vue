@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <div class="section-merch bg-no-repeat bg-cover bg-center">
+  <div class="section-merch bg-no-repeat bg-cover bg-center" :style="{ backgroundImage: 'url(/images/home_merch.jpg)' }">
     <div class="container mx-auto px-4 text-center">
       <router-link to="/merch" class="font-heading text-4xl uppercase text-white mb-8">Merch &raquo;</router-link>
     </div>

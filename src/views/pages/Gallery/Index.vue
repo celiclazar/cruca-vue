@@ -1,24 +1,40 @@
 <script>
-
 import { ref, computed } from 'vue';
 import AppLayout from "/src/views/layouts/AppLayout.vue";
 
 export default {
-  props: { images: Array },
   components: {
     AppLayout,
   },
-  setup(props) {
+  setup() {
     const currentFilter = ref('tattoo');
 
+    const images = [
+      { id: 1, url: '/gallery_images/image1.jpg', alt: 'Image 1', type: 'tattoo' },
+      { id: 2, url: '/gallery_images/image2.jpg', alt: 'Image 2', type: 'sketch' },
+      { id: 3, url: '/gallery_images/image3.jpg', alt: 'Image 3', type: 'tattoo' },
+      { id: 4, url: '/gallery_images/image4.jpg', alt: 'Image 4', type: 'sketch' },
+      { id: 5, url: '/gallery_images/image5.jpg', alt: 'Image 5', type: 'tattoo' },
+      { id: 6, url: '/gallery_images/image6.jpg', alt: 'Image 6', type: 'sketch' },
+      { id: 7, url: '/gallery_images/image7.jpg', alt: 'Image 7', type: 'tattoo' },
+      { id: 8, url: '/gallery_images/image8.jpg', alt: 'Image 8', type: 'sketch' },
+      { id: 9, url: '/gallery_images/image9.jpg', alt: 'Image 9', type: 'tattoo' },
+      { id: 10, url: '/gallery_images/image10.jpg', alt: 'Image 10', type: 'sketch' },
+      { id: 11, url: '/gallery_images/image11.jpg', alt: 'Image 11', type: 'tattoo' },
+      { id: 12, url: '/gallery_images/image12.jpg', alt: 'Image 12', type: 'sketch' },
+      { id: 13, url: '/gallery_images/image13.jpg', alt: 'Image 13', type: 'tattoo' },
+      { id: 14, url: '/gallery_images/image14.jpg', alt: 'Image 14', type: 'sketch' },
+      { id: 15, url: '/gallery_images/image15.jpg', alt: 'Image 15', type: 'tattoo' },
+      { id: 16, url: '/gallery_images/image16.jpg', alt: 'Image 16', type: 'sketch' }
+    ];
     const filteredImages = computed(() => {
       switch (currentFilter.value) {
         case 'tattoo':
-          return props.images.filter(image => image.type === 'tattoo');
+          return images.filter(image => image.type === 'tattoo');
         case 'sketch':
-          return props.images.filter(image => image.type === 'sketch');
+          return images.filter(image => image.type === 'sketch');
         default:
-          return props.images;
+          return images;
       }
     });
 
@@ -50,7 +66,7 @@ export default {
         <div class="w-2/3 mx-auto">
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
             <!-- Loop to render filtered images -->
-            <div v-for="image in filteredImages" :key="image.id" class="overflow-hidden">
+            <div v-for="image in filteredImages" :key="image.id" class="overflow-hidden grayscale">
               <img :src="image.url" :alt="image.alt" class="w-full h-auto object-cover mx-auto rounded-xl">
             </div>
           </div>

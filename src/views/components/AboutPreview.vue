@@ -12,7 +12,7 @@ export default {
     <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between">
       <!-- Decorative circle - adjust size and make it fully round on all screen sizes -->
       <div
-          class="rounded-full w-48 h-48 sm:w-64 sm:h-64 mb-8 lg:mb-0 lg:mr-20">
+          class="rounded-full w-48 h-48 sm:w-64 sm:h-64 mb-8 lg:mb-0 lg:mr-20 bg-slate-300">
       </div>
 
       <!-- Text and button - center align text on small screens and left align on larger screens -->

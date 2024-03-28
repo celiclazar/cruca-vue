@@ -38,7 +38,7 @@ export default {
 <template>
     <AppLayout>
       <ImageHeaderSection class=""/>
-      <MainHeaderSection class="py-10 sm:-m-10" />
+      <MainHeaderSection class="move-up" />
       <AboutPreview class="sm:py-28"/>
       <GalleryPreview class="py-28"/>
       <MerchPreview class="py-28"/>
@@ -46,3 +46,22 @@ export default {
       <BookingPreview class="py-0 sm:py-28"/>
     </AppLayout>
 </template>
+
+<style>
+
+.move-up {
+  background-color: transparent;
+  box-shadow: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+    /* Apply styles for medium screens and above */
+    .move-up {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      position: relative;
+      margin: -320px 0 50px 0; /* Default margin for all screen sizes */
+    }
+}
+</style>
