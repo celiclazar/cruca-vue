@@ -18,7 +18,7 @@ export default  {
                     <img src="/images/review.jpg">
                 </div>
                 <div class="w-2/3 p-4 sm:w-2/3 sm:p-4">
-                    <p class="text-sm md:text-base sm:text-3xl">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                    <p class="text-sm sm:text-base md:text-3xl ">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
                 </div>
             </div>
             <div class="text-center mt-8 sm:mt-12">
