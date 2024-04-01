@@ -86,10 +86,10 @@ export default {
                 <div class="flex flex-col justify-center gap-8 sm:gap-4">
                   <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 md:space-x-8 w-full">
                     <div class="sm:w-1/2">
-                      <input v-model="form.name" class="w-full h-12 border-dimgray border-1 bg-black font-body italic" type="text" placeholder="Name*" required>
+                      <input v-model="form.name" class="w-full h-12 border-dimgray booking-input border-1 bg-black font-body italic" type="text" placeholder="Name*" required>
                     </div>
                     <div class="sm:w-1/2">
-                      <input v-model="form.email" class="w-full h-12 border-dimgray border-1 bg-black font-body italic" type="email" placeholder="E-mail*" required>
+                      <input v-model="form.email" class="w-full h-12 border-dimgray booking-input border-1 bg-black font-body italic" type="email" placeholder="E-mail*" required>
                     </div>
                   </div>
                   <div class="flex flex-col space-y-4 w-full">
