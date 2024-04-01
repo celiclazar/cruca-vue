@@ -42,7 +42,7 @@ export default {
       <AboutPreview class="sm:py-28"/>
       <GalleryPreview class="py-28"/>
       <MerchPreview class="py-28"/>
-      <ReviewsPreview class="py-28"/>
+      <ReviewsPreview class="pt-28 pb-0"/>
       <BookingPreview class="py-0 sm:py-28"/>
     </AppLayout>
 </template>
