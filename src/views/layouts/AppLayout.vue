@@ -12,7 +12,7 @@
 
 
         <!-- Content will be injected here -->
-        <main class="flex-grow">
+        <main class="flex-row">
             <slot />
         </main>
 
