@@ -14,11 +14,11 @@ export default  {
             <h2 class="font-heading text-3xl uppercase">Reviews</h2>
             </div>
             <div class="flex flex-row h-46 review-border review-medium sm:w-3/5">
-                <div class="w-1/3 sm:w-1/3">
+                <div class="flex w-1/3">
                     <img src="/images/review.jpg">
                 </div>
-                <div class="w-2/3 p-4 sm:w-2/3 sm:p-4">
-                    <p class="text-sm sm:text-base md:text-3xl ">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+                <div class="flex w-2/3 sm:w-2/3 p-4 sm:p-4 text-justify">
+                    <p class="h-full text-sm md:text-xl lg:text-3xl">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
                 </div>
             </div>
             <div class="text-center mt-8 sm:mt-12">
