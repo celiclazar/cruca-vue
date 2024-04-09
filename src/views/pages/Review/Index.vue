@@ -1,10 +1,12 @@
 <script>
 
 import AppLayout from "/src/views/layouts/AppLayout.vue";
+import ReviewItem from "@/views/components/ReviewItem.vue";
 
 export default {
     components: {
         AppLayout,
+        ReviewItem
     },
     data() {
         return {
@@ -67,24 +69,29 @@ export default {
 
 <template>
     <AppLayout>
-        <div class="bg-black text-white mt-24 px-12 border-t border-white">
+        <div class="bg-black text-white mt-24 px-12 md:px-32 border-t border-white">
             <div class="flex flex-col mt-10 w-full mx-auto relative">
                 <div class="">
-                  <h1 class="font-heading text-4xl uppercase text-center h-10">Reviews</h1>
+                  <h1 class="font-heading text-4xl uppercase text-center h-10 mb-6">Reviews</h1>
                 </div>
-                <div class="mt-10 flex flex-col">
-                  <div v-for="(review, index) in reviews" :key="index"
-                       class="border border-white p-6 mb-6 h-auto">
-                    <div class="relative h-8">
-                      <img class="h-8" src="/icons/quote.png">
+                <div class="grid grid-cols-1 md:grid-cols-3 md:gap-3">
+                    <!-- First column -->
+                    <div class="col-span-1">
+                        <ReviewItem v-for="(review, index) in reviews.slice(0, 2)"
+                                    :key="index"
+                                    :review="review"
+                                    class="md:my-20"/>
                     </div>
-                    <div>
-                      <p class="text-left font-body font-normal text-base leading-6">{{ review.text }}</p>
+                    <!-- Second column -->
+                    <div class="col-span-1">
+                        <ReviewItem v-for="(review, index) in reviews.slice(2, 5)" :key="index" :review="review" />
                     </div>
-                    <div class="relative flex justify-end h-8">
-                      <img class="h-8" src="/icons/quote.png">
+                    <!-- Third column -->
+                    <div class="col-span-1">
+                        <ReviewItem v-for="(review, index) in reviews.slice(5, 7)"
+                                    :key="index" :review="review"
+                                    class="sm:my-20" />
                     </div>
-                  </div>
                 </div>
             </div>
             <div class="flex flex-col mt-10">
@@ -96,7 +103,7 @@ export default {
                         <div class="flex justify-center mt-8">
                             <textarea
                                 v-model="form.text"
-                                class="booking-input h-24 w-full lg:h-3/4 font-body italic"
+                                class="booking-input h-24 sm:h-36 w-full sm:w-1/3 font-body italic"
                                 placeholder="Review.." required>
                             </textarea>
                         </div>
@@ -111,7 +118,6 @@ export default {
         </div>
     </AppLayout>
 </template>
-
 <style>
 .booking-input {
   background-color: transparent;
