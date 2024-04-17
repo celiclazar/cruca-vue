@@ -1,13 +1,17 @@
 <script>
 import { ref, computed } from 'vue';
 import AppLayout from "/src/views/layouts/AppLayout.vue";
+import ImageModal from "/src/views/components/ImageModal.vue";
 
 export default {
   components: {
     AppLayout,
+    ImageModal
   },
   setup() {
     const currentFilter = ref('tattoo');
+    const modalOpen = ref(false);
+    const selectedImage = ref(null);
 
     const images = [
       { id: 1, url: '/gallery_images/image1.jpg', alt: 'Image 1', type: 'tattoo' },
@@ -27,6 +31,7 @@ export default {
       { id: 15, url: '/gallery_images/image15.jpg', alt: 'Image 15', type: 'tattoo' },
       { id: 16, url: '/gallery_images/image16.jpg', alt: 'Image 16', type: 'sketch' }
     ];
+
     const filteredImages = computed(() => {
       switch (currentFilter.value) {
         case 'tattoo':
@@ -42,10 +47,18 @@ export default {
       currentFilter.value = filter;
     }
 
+    function openModal(image) {
+      selectedImage.value = image;
+      modalOpen.value = true;
+    }
+
     return {
       currentFilter,
       filteredImages,
-      setFilter
+      setFilter,
+      modalOpen,
+      openModal,
+      selectedImage,
     };
   },
 }
@@ -67,12 +80,15 @@ export default {
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
             <!-- Loop to render filtered images -->
             <div v-for="image in filteredImages" :key="image.id" class="overflow-hidden grayscale">
-              <img :src="image.url" :alt="image.alt" class="w-full h-auto object-cover mx-auto rounded-xl">
+              <img :src="image.url" :alt="image.alt" class="w-full h-auto object-cover mx-auto rounded-xl" @click="openModal(image)">
             </div>
           </div>
         </div>
       </div>
     </section>
+    <Teleport to="body">
+      <ImageModal v-if="modalOpen" :image="selectedImage" @close="modalOpen = false" />
+    </Teleport>
   </AppLayout>
 </template>
 
