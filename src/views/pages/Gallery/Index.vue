@@ -11,7 +11,6 @@ export default {
   setup() {
     const currentFilter = ref('tattoo');
     const modalOpen = ref(false);
-    const selectedImage = ref(null);
 
     const images = [
       { id: 1, url: '/gallery_images/image1.jpg', alt: 'Image 1', type: 'tattoo' },
@@ -43,12 +42,15 @@ export default {
       }
     });
 
+    const modalImages = ref([]);
+
     function setFilter(filter) {
       currentFilter.value = filter;
     }
 
-    function openModal(image) {
-      selectedImage.value = image;
+    function openModalWithSlider(image) {
+      const tempImages = filteredImages.value.filter(img => img.id >= image.id);
+      modalImages.value = [...tempImages];
       modalOpen.value = true;
     }
 
@@ -57,8 +59,8 @@ export default {
       filteredImages,
       setFilter,
       modalOpen,
-      openModal,
-      selectedImage,
+      modalImages,
+      openModalWithSlider,
     };
   },
 }
@@ -68,7 +70,7 @@ export default {
   <AppLayout>
     <section class="bg-black text-white py-24">
       <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-12">Gallery</h2>
+        <h2 class="text-4xl font-heading text-center mb-12">Gallery</h2>
         <!-- Tabs or Category Filters -->
         <div class="flex justify-center mb-8">
           <!-- Assuming you have some method to switch tabs or filter categories -->
@@ -80,14 +82,14 @@ export default {
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
             <!-- Loop to render filtered images -->
             <div v-for="image in filteredImages" :key="image.id" class="overflow-hidden grayscale">
-              <img :src="image.url" :alt="image.alt" class="w-full h-auto object-cover mx-auto rounded-xl" @click="openModal(image)">
+              <img :src="image.url" :alt="image.alt" class="w-full h-auto object-cover mx-auto rounded-xl" @click="openModalWithSlider(image)">
             </div>
           </div>
         </div>
       </div>
     </section>
     <Teleport to="body">
-      <ImageModal v-if="modalOpen" :image="selectedImage" @close="modalOpen = false" />
+      <ImageModal v-if="modalOpen" :images="modalImages" @close="modalOpen = false" />
     </Teleport>
   </AppLayout>
 </template>
